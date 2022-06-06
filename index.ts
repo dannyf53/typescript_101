@@ -1,45 +1,19 @@
-// const variable: type = value
+// Array
 
-const greeting: string = "Hello World!";
+const EnglishCricket: string[] = [
+    'Ben Stokes',
+    'Joe Root',
+    'Alex Lees'
+]
 
-const year: number = 2021
+// New TypeScript
+const listOfNumbers: number[] = [1,2,3,4]
 
-const addTwoNumbers = (a: number, b:number): number => a + b
+// Old TypeScript
+const numbers: Array<number> = [1,2,3]
 
-interface User {
-    id: string;
-    name: string;
-}
+const stringOrNumber: (string|number)[] = [1, 'hello', 2021, 'Michael']
 
-interface Book {
-    id: string;
-    name: string;
-    releaseDate?: Date;
-}
-
-const getUserById = (id: string): User => ({
-    id,
-    name: 'Danny Freeman',
-})
-
-const getBookById = (id: string): Book => ({
-    id,
-    name: 'TypeScript 101',
-})
-
-const user = getUserById('user-1')
-const book = getBookById('book-1')
-
-const saveUser = (user: User) => console.log('saving user', {
-    prop1: user.id,
-    prop2: user.name
-})
-
-const saveBook = (book: Book) => console.log('saving book', {
-    prop1: book.id,
-    prop2: book.name,
-    prop3: book.releaseDate?.toISOString()
-})
-
-saveUser(book)
-saveBook(book)
+// Tuples
+const tuple: [number, string] = [2020, 'Why?']
+const correct: [string, number] = ['why', 2020]
